@@ -295,3 +295,158 @@ body {
         padding: 6px 12px;
     }
 }
+
+/* Container for the About section */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Text section */
+.text.about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title {
+    font-size: 48px;
+    color: #00274d;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.motto,
+.established,
+.team-description,
+.values-objectives p {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.team-photo {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+/* Headings for values and objectives */
+.values-objectives h2 {
+    font-size: 24px;
+    color: #00274d;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.values-objectives p {
+    margin-left: 20px;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: #00274d;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Background shapes */
+.background-shape {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #d9eefe;
+    border-radius: 50%;
+    animation: bubble 10s ease-in-out infinite alternate;
+}
+
+.background-shape.one {
+    top: -100px;
+    left: -100px;
+    animation: wobble 5s ease-in-out infinite alternate;
+}
+
+.background-shape.two {
+    bottom: -100px;
+    right: -100px;
+    animation: wobble 6s ease-in-out infinite alternate;
+}
+
+/* Animations */
+@keyframes bubble {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes wobble {
+    0% {
+        transform: translate(-5px, -5px) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(5px, 5px) rotate(2deg);
+    }
+
+    50% {
+        transform: translate(-3px, -3px) rotate(-2deg);
+    }
+
+    75% {
+        transform: translate(3px, 3px) rotate(2deg);
+    }
+
+    100% {
+        transform: translate(-1px, -1px) rotate(0deg);
+    }
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .title {
+        font-size: 32px;
+    }
+
+    .motto,
+    .established,
+    .team-description,
+    .values-objectives p {
+        font-size: 16px;
+    }
+
+    .team-photo {
+        width: 100px;
+        margin-right: 10px;
+    }
+
+    .background-shape {
+        width: 300px;
+        height: 300px;
+    }
+}
