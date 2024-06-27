@@ -22,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 60px;
+  
 }
 
 .background-shape {
