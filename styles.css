@@ -94,6 +94,11 @@
     text-align: center;
     margin-top: 200px;
 }
+.services-text .title {
+    font-size: 48px;
+    color: #00274d;
+    margin: 0;
+}
 
 .text .title {
     font-size: 48px;
