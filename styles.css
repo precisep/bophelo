@@ -9,7 +9,7 @@ body {
     min-height: 100vh;
     background-color: #f0f8ff;
     font-family: Arial, sans-serif;
-    flex-direction: column;
+    
 }
 
 .container {
@@ -286,6 +286,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 50px;
 }
 
 .title {
@@ -293,6 +294,14 @@ body {
     color: #00274d;
     margin-bottom: 20px;
     font-weight: bold;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .motto,
@@ -301,8 +310,9 @@ body {
 .values-objectives p {
     font-size: 18px;
     color: #333333;
-    margin-bottom: 10px;
-    text-align: left;
+    margin-bottom: 20px;
+    max-width: 800px;
+    text-align: justify;
     line-height: 1.6;
 }
 
@@ -323,13 +333,17 @@ body {
 .values-objectives h2 {
     font-size: 24px;
     color: #00274d;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 10px;
     font-weight: bold;
+    text-align: center;
 }
 
 .values-objectives p {
-    margin-left: 20px;
+    margin: 0 auto;
+    /* Center paragraphs */
+    max-width: 600px;
+    /* Limit paragraph width for better readability */
 }
 
 @media only screen and (max-width: 768px) {
