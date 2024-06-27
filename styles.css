@@ -55,19 +55,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap:10x;
     margin-bottom: 20px;
 }
 
 .logo .icon-p {
     width: 100px;
     height: 100px;
-    background-color: #00274d;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+    color:#00274d;
     font-size: 60px;
     font-weight: bold;
     animation: drop-in 1s ease-out forwards;
