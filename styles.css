@@ -151,6 +151,23 @@ body {
     color: #ffffff;
 }
 
+/* Contact Details Styles */
+.contact-details {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #00274d;
+}
+
+.contact-details .title {
+    font-size: 24px;
+    color: #00274d;
+    margin-bottom: 20px;
+}
 .footer {
     position: absolute;
     bottom: 0;
