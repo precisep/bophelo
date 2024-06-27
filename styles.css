@@ -246,8 +246,8 @@ body {
 /* Media Queries for Responsive Design */
 @media only screen and (max-width: 768px) {
     .background-shape {
-        width: 200px;
-        height: 200px;
+        width: 400px;
+        height: 400px;
     }
 
     .logo .icon-p,
