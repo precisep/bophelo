@@ -179,17 +179,18 @@ body {
 }
 
 /* Footer */
-footer {
-    font-weight: 300;
+.footer {
+    width: 100%;
+    background-color: #00274d;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
     display: flex;
     justify-content: space-evenly;
-    padding: 1rem;
-    background: #00274d;
-    color: white;
-    text-align: center;
 }
 
-footer>p {
+.footer p {
     margin: 0;
 }
 
