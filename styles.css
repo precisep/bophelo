@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #ffffff;
-    overflow: inherit;
+    overflow-y: scroll;
 }
 
 .background-shape {
