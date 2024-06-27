@@ -179,19 +179,18 @@ body {
 }
 
 /* Footer */
-.footer {
-    width: 100%;
-    background-color: #00274d;
-    color: #ffffff;
+footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    background: #00274d;
+    color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
 }
 
-.footer p {
-    margin: 0;
+footer>p {
+    margin: 1rem;
 }
 
 /* Animations */
