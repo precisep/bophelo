@@ -126,7 +126,7 @@ body {
     max-height: 50vh;
         /* Make it scrollable */
     padding: 10px;
-    box-sizing: border-box;
+   
 }
 
 .service-item {
