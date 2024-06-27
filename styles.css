@@ -187,6 +187,7 @@ body {
     bottom: 0;
     width: 100%;
     position: fixed;
+    align-items: center;
 }
 
 
