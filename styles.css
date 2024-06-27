@@ -45,9 +45,9 @@ body {
 
 .logo-container {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     z-index: 1;
     text-align: center;
 }
@@ -106,7 +106,8 @@ body {
 
 .services-text {
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
+    /* Adjusted from 200px */
 }
 
 .services-text .title {
@@ -143,15 +144,17 @@ body {
     top: 20px;
     right: 20px;
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    /* Adjusted for smaller screens */
 }
 
 .navigation a {
     text-decoration: none;
     color: #00274d;
-    font-size: 20px;
+    font-size: 16px;
+    /* Adjusted font size for smaller screens */
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border: 2px solid #00274d;
     border-radius: 30px;
     transition: all 0.3s ease;
@@ -264,7 +267,7 @@ body {
 
     .services-text .title {
         font-size: 36px;
-        margin-top: 100px;
+        margin-top: 150px;
         /* Adjust as needed */
     }
 
@@ -274,12 +277,14 @@ body {
     }
 
     .navigation {
-        top: 10px;
-        right: 10px;
+        top: 15px;
+        right: 15px;
+        gap: 5px;
+        /* Adjusted for smaller screens */
     }
 
     .navigation a {
-        font-size: 16px;
-        padding: 8px 16px;
+        font-size: 14px;
+        padding: 6px 12px;
     }
 }
