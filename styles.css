@@ -55,7 +55,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10x;
+    gap:20x;
 }
 
 .logo .icon-p {
