@@ -198,23 +198,18 @@ body {
 
 .snowflake {
     position: absolute;
-    width: 5px;
-    height: 5px;
+    top: -10px;
+    width: 10px;
+    height: 10px;
     background-color: #90c5e6;
-    /* Light blue color */
     border-radius: 50%;
-    z-index: 0;
-    /* Ensure snowflakes are behind other elements */
-    animation: snowfall linear infinite;
+    opacity: 0.8;
+    animation: fall linear infinite;
 }
 
-@keyframes snowfall {
+@keyframes fall {
     0% {
         transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    50% {
         opacity: 1;
     }
 
