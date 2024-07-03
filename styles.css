@@ -6,11 +6,19 @@ body {
     align-items: center;
     width: 100vw;
     min-height: 100vh;
-    background-color: #f0f8ff;
     font-family: Arial, sans-serif;
     flex-direction: column;
+    background-color: #f0f8ff;
+   
+    
 }
-
+.home-section {
+    background-image: url('image2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+}
 .container {
     position: relative;
     width: 100vw;
@@ -18,57 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
     overflow: hidden;
-}
-
-.background-shape-1 {
-    position: absolute;
-    width: 442px;
-    height: 442px;
-    background-color: #0a6cffe0;
-    border-radius: 42%;
-    animation: bubble 10s ease-in-out infinite alternate, wobble 6s ease-in-out infinite alternate;
-      
-}
-
-.background-shape-2 {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background-color: blue;
-    border-radius: 42%;
-    animation: bubble 10s ease-in-out infinite alternate, wobble 6s ease-in-out infinite alternate;
-       
-}
-
-.background-shape-1.one {
-    top: -200px;
-    left: -200px;
-    animation: wobble 6s ease-in-out infinite alternate;
-    z-index: 1;
-  
-}
-
-.background-shape-1.two {
-    bottom: -200px;
-    right: -200px;
-    animation: wobble 6s ease-in-out infinite alternate;
-    z-index: 1;
-}
-
-.background-shape-2.three {
-    top: -195px;
-    left: -195px;
-    animation: wobble 6s ease-in-out infinite alternate;
-    z-index: 0;
-}
-
-.background-shape-2.four {
-    bottom: -195px;
-    right: -195px;
-    animation: wobble 6s ease-in-out infinite alternate;
-    z-index : 0;
 }
 
 .logo-container {
@@ -241,6 +199,7 @@ body {
 
 .navigation a {
     text-decoration: none;
+    background-color: #f0f8ff;
     color: #00274d;
     font-size: 16px;
     font-weight: bold;
