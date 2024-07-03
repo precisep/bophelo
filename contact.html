@@ -20,7 +20,7 @@
         <div class="text">
             <p class="title">Contact Us</p>
             <p>Please use the form below to get in touch with us or make a booking:</p>
-            <form action="mailto:mokoenamandlae@gmail.com" method="post" enctype="text/plain">
+            <form action="send_mail.php" method="post">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -35,6 +35,9 @@
                 </div>
                 <button type="submit">Submit</button>
             </form>
+            <div id="thank-you-message" style="display: none;">
+                <p>Thank you for contacting us! We will get back to you shortly.</p>
+            </div>
         </div>
         <div class="contact-details">
             <p class="title">Our Contact Details</p>
@@ -55,6 +58,24 @@
             <p>&copy; 2024 Deep Freeze. All rights reserved.</p>
         </div>
     </div>
+    <script>
+        
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const form = event.target;
+
+            fetch('send_mail.php', {
+                method: 'POST',
+                body: new FormData(form)
+            })
+                .then(response => response.text())
+                .then(data => {
+                    form.style.display = 'none';
+                    document.getElementById('thank-you-message').style.display = 'block';
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
 </body>
 
 </html>
