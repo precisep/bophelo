@@ -255,6 +255,70 @@ body {
     color: #ffffff;
 }
 
+
+.text .motto,
+.text .established {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team-photo {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.values-objectives {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+}
+
+.values,
+.objectives {
+    width: 45%;
+}
+
+.values h2,
+.objectives h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.values ul,
+.objectives ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.values li,
+.objectives li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.values i,
+.objectives i {
+    color: #007BFF;
+    margin-right: 10px;
+}
+
+
 .text .title,
 .contact-details .title {
     font-size: 24px;
@@ -389,6 +453,7 @@ button:hover {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+
 
 @keyframes fall {
     0% {
