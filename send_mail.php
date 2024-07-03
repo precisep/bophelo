@@ -20,4 +20,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Invalid request method.";
 }
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+
+    $to = "mokoenamandlae@gmail.com";
+
+
+    $subject = 'New message from ' . $name;
+
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-type: text/html\r\n";
+
+    if (mail($to, $subject, $message, $headers)) {
+        echo 'Email sent successfully!';
+    } else {
+        echo 'Email could not be sent.';
+    }
+}
+
 ?>
