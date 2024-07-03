@@ -1,4 +1,3 @@
-/* Reset and basic styles */
 body {
     margin: 0;
     padding: 0;
@@ -23,25 +22,53 @@ body {
     overflow: hidden;
 }
 
-.background-shape {
+.background-shape-1 {
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background-color: #d9eefe;
-    border-radius: 50%;
-    animation: bubble 10s ease-in-out infinite alternate;
+    width: 442px;
+    height: 442px;
+    background-color: #0a6cffe0;
+    border-radius: 42%;
+    animation: bubble 10s ease-in-out infinite alternate, wobble 6s ease-in-out infinite alternate;
+      
 }
 
-.background-shape.one {
-    top: -100px;
-    left: -100px;
-    animation: wobble 5s ease-in-out infinite alternate;
+.background-shape-2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    border-radius: 42%;
+    animation: bubble 10s ease-in-out infinite alternate, wobble 6s ease-in-out infinite alternate;
+       
 }
 
-.background-shape.two {
-    bottom: -100px;
-    right: -100px;
+.background-shape-1.one {
+    top: -200px;
+    left: -200px;
     animation: wobble 6s ease-in-out infinite alternate;
+    z-index: 1;
+  
+}
+
+.background-shape-1.two {
+    bottom: -200px;
+    right: -200px;
+    animation: wobble 6s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+.background-shape-2.three {
+    top: -195px;
+    left: -195px;
+    animation: wobble 6s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+.background-shape-2.four {
+    bottom: -195px;
+    right: -195px;
+    animation: wobble 6s ease-in-out infinite alternate;
+    z-index : 0;
 }
 
 .logo-container {
@@ -53,32 +80,67 @@ body {
     text-align: center;
 }
 
-.logo {
-    display: flex;
+.logo-image {
+    width: 430px;
     align-items: center;
-    justify-content: center;
-    gap: 13px;
-    margin-bottom: 0px;
+    z-index: -1;
+}
+.snowflake {
+    font-size: 36px;
+    color: blue;
+    animation: spin 10s linear infinite;
 }
 
-.logo .icon-p,
-.logo .icon-drop {
-    width: 100px;
-    height: 100px;
-    background-color: #00274d;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo-text {
+    margin-top: 10px;
     color: #ffffff;
-    font-size: 60px;
-    font-weight: bold;
-    animation: drop-in 1s ease-out forwards;
 }
 
-.logo .icon-drop {
-    background-color: #d9eefe;
-    color: #00274d;
+.logo-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.sub-title {
+    font-size: 18px;
+}
+
+.large-d {
+    font-size: 72px;
+    color: #ffffff;
+    margin-left: -20px;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .logo-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .snowflake {
+        font-size: 24px;
+    }
+
+    .logo-title {
+        font-size: 20px;
+    }
+
+    .sub-title {
+        font-size: 16px;
+    }
+
+    .large-d {
+        font-size: 48px;
+    }
 }
 
 .text {
@@ -135,6 +197,40 @@ body {
     margin-bottom: 10px;
 }
 
+.service-item button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00274d;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.service-item button:hover {
+    background-color: #0056b3;
+}
+
+.why-choose-us ul {
+    list-style: none;
+    align-items: center;
+    padding: 0;
+}
+
+.why-choose-us li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.why-choose-us li i {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #00274d;
+}
+
 .navigation {
     position: absolute;
     top: 20px;
@@ -159,25 +255,72 @@ body {
     color: #ffffff;
 }
 
-/* Contact Details Styles */
-.contact-details {
-    margin-top: 30px;
-    text-align: center;
+.text .title,
+.contact-details .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #00274d;;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00274d;;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #00274d;;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 .contact-details p {
-    margin: 10px 0;
-    font-size: 18px;
-    color: #00274d;
+    margin: 5px 0;
+    color: #555;
 }
 
-.contact-details .title {
-    font-size: 24px;
-    color: #00274d;
-    margin-bottom: 20px;
+.contact-details a {
+    color: #007BFF;
+    text-decoration: none;
 }
 
-/* Footer */
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -186,25 +329,23 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
+    z-index: 2;
 }
 
 .footer p {
     margin: 0;
 }
 
-
-
-/* Animations */
-
 .snowflake {
     position: absolute;
     top: -10px;
-    width: 10px;
-    height: 10px;
-    background-color: #90c5e6;
-    border-radius: 50%;
+    font-size: 24px;
+    color: rgb(46, 173, 216);
     opacity: 0.8;
-    animation: fall linear infinite;
+    pointer-events: none;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 @keyframes fall {
@@ -221,11 +362,8 @@ body {
 
 .background-shape.two {
     bottom: -150px;
-    /* Adjust position as needed */
     right: -150px;
-    /* Adjust position as needed */
     background-color: #d9eefe;
-    /* Color for the second shape */
     animation: wobble 6s ease-in-out infinite alternate;
 }
 
@@ -294,7 +432,6 @@ body {
     }
 }
 
-/* Media Queries for Responsive Design */
 @media only screen and (max-width: 768px) {
     .background-shape {
         width: 300px;
@@ -338,7 +475,6 @@ body {
     }
 }
 
-/* Text section */
 .text.about {
     display: flex;
     flex-direction: column;
@@ -376,7 +512,6 @@ body {
     border-radius: 10px;
 }
 
-/* Headings for values and objectives */
 .values-objectives h2 {
     font-size: 24px;
     color: #00274d;
