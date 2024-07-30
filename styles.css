@@ -190,7 +190,7 @@ body {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    width: 150px;
+    width: 50px;
 }
 
 .service-item i {
@@ -526,7 +526,7 @@ button:hover {
     }
 
     .service-item {
-        width: 120px;
+        width: 50%;
         padding: 15px;
     }
 
@@ -613,3 +613,171 @@ button:hover {
         height: 300px;
     }
 }
+
+@media only screen and (max-width: 375px) {
+    .logo-container {
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+    }
+
+    .logo-image {
+        width: 215px;
+        align-items: center;
+        z-index: -1;
+            
+    }
+
+    .snowflake {
+        font-size: 12px;
+    }
+
+    .logo-title {
+        font-size: 18px;
+    }
+
+    .sub-title {
+        font-size: 12px;
+    }
+
+    .text .title {
+        font-size: 24px;
+    }
+
+    .text .subtitle {
+        font-size: 14px;
+    }
+
+    .services-text .title {
+        font-size: 20px;
+    }
+
+    .service-item {
+        width: 50%;
+        max-width: 63px;
+    }
+
+    .values,
+    .objectives {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .navigation {
+        top: 10px;
+        right: 10px;
+        gap: 5px;
+    }
+
+    .navigation a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .team-photo {
+        width: 80px;
+        margin-right: 10px;
+    }
+
+    .background-shape {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 430px) {
+    .logo-container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .logo-image {
+        width: 330px;
+        align-items: center;
+        z-index: -1;
+
+    }
+    .snowflake {
+        font-size: 24px;
+    }
+
+    .logo-title {
+        font-size: 24px;
+    }
+
+    .sub-title {
+        font-size: 18px;
+    }
+
+    .text .title {
+        font-size: 32px;
+    }
+
+    .text .subtitle {
+        font-size: 18px;
+    }
+
+    .services-text .title {
+        font-size: 30px;
+    }
+
+    .service-item {
+        background-color: #f0f8ff;
+        border: 2px solid #00274d;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        width: 150px;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+    }
+
+    .service-item i {
+        font-size: 36px;
+        color: #00274d;
+        margin-bottom: 10px;
+    }
+
+    .service-item button {
+        padding: 6px 12px;
+        font-size: 16px;
+    }
+
+    .service-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .values,
+    .objectives {
+        width: 48%;
+        max-width: 48%;
+    }
+
+    .navigation {
+        top: 20px;
+        right: 20px;
+        gap: 10px;
+    }
+
+    .navigation a {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .team-photo {
+        width: 100px;
+        margin-right: 20px;
+    }
+
+    .background-shape {
+        width: 300px;
+        height: 300px;
+    }
+}
+
