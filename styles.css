@@ -91,7 +91,9 @@ body {
     color: blue;
     animation: spin 10s linear infinite;
 }
-
+#anchor{
+color:white
+}
 .logo-text {
     margin-top: 10px;
     color: #ffffff;
@@ -321,17 +323,19 @@ body {
     margin-right: 10px;
 }
 
-.contact-details .title {
+.contact-details .title{
     font-size: 12px;
     margin-bottom: 20px;
     color:#ddd;
 }
 
-.text p {
+.contact-details, .text{
     color: #ffffff;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    font-size: 12;
 }
+
 
 #contactForm {
     margin-bottom: 20px;
@@ -412,6 +416,40 @@ button:hover {
     animation-name: fall;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+
+.social-media {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.social-media .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.social-media ol {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media ol li {
+    margin-right: 15px;
+    
+}
+
+.social-media ol li a {
+    color: #333;
+    font-size: 28px;
+    
+}
+
+.social-media ol li a:hover {
+    color: #007BFF;
 }
 
 
@@ -550,9 +588,42 @@ button:hover {
 
 .title {
     font-size: 48px;
-    color: #00135d;
+    color: #001d90;
     margin-bottom: 20px;
     font-weight: bold;
+}
+
+.social-media {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.social-media .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.social-media ol {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media ol li {
+    margin-right: 15px;
+   
+}
+
+.social-media ol li a {
+    color: #cbcbcb;
+    font-size: 28px;
+  
+}
+
+.social-media ol li a:hover {
+    color: #007BFF;
 }
 
 .motto,
@@ -613,6 +684,9 @@ button:hover {
         height: 300px;
     }
 }
+
+
+
 
 @media only screen and (max-width: 375px) {
     .logo-container {
