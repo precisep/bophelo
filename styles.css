@@ -19,6 +19,49 @@ body {
     background-position: center center;
     height: 100vh;
 }
+
+.contact-us {
+    background-image: url('image6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    
+}
+.contact-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.container {
+ z-index: 2;
+}
+
+.services {
+    background-image: url('image5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+}
+
+.services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
 .container {
     position: relative;
     width: 100vw;
@@ -120,14 +163,15 @@ body {
 }
 
 .services-text {
+    color: #00274d;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 95px;
 }
 
 .services-text .title {
     font-size: 48px;
-    color: #00274d;
-    margin: 0;
+    color: #ffffff;;
+    margin-bottom: 50px;
     font-weight: bold;
 }
 
@@ -218,7 +262,7 @@ body {
 .text .motto,
 .text .established {
     font-size: 18px;
-    color: #555;
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -252,7 +296,7 @@ body {
 .objectives h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #333;
+    color: black;
 }
 
 .values ul,
@@ -265,7 +309,7 @@ body {
 .values li,
 .objectives li {
     font-size: 16px;
-    color: #555;
+    color: #000000;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -277,12 +321,20 @@ body {
     margin-right: 10px;
 }
 
-
-.text .title,
 .contact-details .title {
-    font-size: 24px;
+    font-size: 12px;
     margin-bottom: 20px;
-    color: #00274d;;
+    color:#ddd;
+}
+
+.text p {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#contactForm {
+    margin-bottom: 20px;
 }
 
 .form-group {
@@ -293,10 +345,21 @@ body {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #00274d;;
+    color: #ffffff;
 }
 
-.form-group input,
+.form-group input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: border-color 0.3s ease;
+
+}
 .form-group textarea {
     width: 100%;
     padding: 10px;
@@ -304,63 +367,15 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-size: 16px;
-    color: #00274d;;
-    background-color: #f8f8f8;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
     transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #007BFF;
-    outline: none;
-}
-
-.contact-details p {
-    margin: 5px 0;
-    color: #555;
-}
-
-.contact-details a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.contact-details a:hover {
-    text-decoration: underline;
-}
-
-.contact-details i {
-    color: #007BFF;
-    margin-right: 10px;
-    font-size: 18px;
- 
-}
-
-.social-media {
-    margin-top: 32px;
-}
-
-.social-media .title {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.social-media a {
-    margin-right: 15px;
-    color: #00274d;
-    font-size: 24px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-media a:hover {
-    color: #0056b3;
 }
 
 button {
     padding: 10px 20px;
     border: none;
-    background-color: #007BFF;
+    background-color: #0056b3;
     color: #ffffff;
     cursor: pointer;
     font-size: 16px;
@@ -369,21 +384,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
-}
-
-.contact-details p {
-    margin: 5px 0;
-    color: #555;
-}
-
-.contact-details a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.contact-details a:hover {
-    text-decoration: underline;
+    background-color: #003d7a;
 }
 
 .footer {
@@ -549,7 +550,7 @@ button:hover {
 
 .title {
     font-size: 48px;
-    color: #00274d;
+    color: #00135d;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -559,7 +560,7 @@ button:hover {
 .team-description,
 .values-objectives p {
     font-size: 18px;
-    color: #333333;
+    color: #000000;
     margin-bottom: 10px;
     text-align: left;
     line-height: 1.6;

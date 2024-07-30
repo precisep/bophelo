@@ -1,22 +1,59 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
+require('dotenv').config();
+const express = require('express');
+const nodemailer = require('nodemailer');
+const AfricasTalking = require('africastalking');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-const server = http.createServer((req, res) => {
-    fs.readFile(path.join(__dirname, 'index.html'), (err, data) => {
-        if (err) {
-            res.writeHead(500);
-            res.end('Error loading index.html');
-        } else {
-            res.writeHead(200, {'Content-Type': 'text/html'});
-            res.end(data);
-        }
-    });
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    }
 });
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+const africasTalking = AfricasTalking({
+    apiKey: process.env.AFRICASTALKING_API_KEY,
+    username: process.env.AFRICASTALKING_USERNAME
+});
+
+const sms = africasTalking.SMS;
+
+app.post('/sendmail', (req, res) => {
+    const { name, email, message } = req.body;
+
+    const mailOptions = {
+        from: email,
+        to: process.env.EMAIL_USER,
+        subject: 'New Contact Form Submission',
+        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+    };
+
+    transporter.sendMail(mailOptions)
+        .then(info => {
+            console.log(`Email sent: ${info.response}`);
+
+            // Send SMS using Africa's Talking
+            const smsMessage = `New contact form submission: Name: ${name}, Email: ${email}, Message: ${message}`;
+            return sms.send({
+                to: ['+27660722042'], // Your phone number with country code
+                message: smsMessage
+            });
+        })
+        .then(response => {
+            console.log(`SMS sent: ${response}`);
+            res.json({ success: true });
+        })
+        .catch(error => {
+            console.error(`Error: ${error}`);
+            res.status(500).json({ success: false, error: 'Error sending email or SMS' });
+        });
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });

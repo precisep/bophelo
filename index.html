@@ -42,7 +42,7 @@
                 snowflake.textContent = '❄';
                 snowflake.style.left = `${Math.random(2) * 100}vw`;
                 snowflake.style.animationDuration = `${(Math.random() * 10) + 5}s`;
-                snowflake.style.animationDelay = `${Math.random() * 0.5}s`;
+                snowflake.style.animationDelay = `${Math.random()*0.00005}s`;
                 container.appendChild(snowflake);
             }
         });
